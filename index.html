@@ -40,29 +40,41 @@
 
 <body>
     
-    <header>
-        <h1>Password Generator</h1>
-        <h4 id="version">
-            v 
-            <script>
-                document.write(PwdGen.version);
-            </script>
-        </h4>
-    </header>
-
-    <main>
+    <div class="pager">
+        <div class="height-spacer">
+            
+            <header>
+                <h1>Password Generator</h1>
+                <h4 id="version">
+                    v 
+                    <script>
+                        document.write(PwdGen.version);
+                    </script>
+                </h4>
+            </header>
         
-        <span id="out_pwd"></span>
+            <main class="mf-centered-column height-spacer">
+                
+                <div class="mf-align-center">
+                    <span id="out_pwd"></span>
+                </div>
+        
+                <form onsubmit="return false">
+                    <div>
+                        <input type="text" name="" id="in_name" placeholder="Name" required autofocus>
+                        <input type="text" name="" id="in_last" placeholder="Lastname" required>
+                        <input type="text" name="" id="in_color" placeholder="Favourite Color" required>
+                    </div>
+                    <div>
+                        <input type="button" id="in_clear" value="Clear">
+                        <input type="submit" id="in_submit" value="Generate!">
+                    </div>
+                </form>
+        
+            </main>
 
-        <form onsubmit="return false">
-            <input type="text" name="" id="in_name" placeholder="Name" required autofocus>
-            <input type="text" name="" id="in_last" placeholder="Lastname" required>
-            <input type="text" name="" id="in_color" placeholder="Favourite Color" required>
-            <input type="button" id="in_clear" value="Clear">
-            <input type="submit" id="in_submit" value="Generate!">
-        </form>
-
-    </main>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 
