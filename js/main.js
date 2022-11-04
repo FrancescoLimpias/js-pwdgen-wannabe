@@ -1,11 +1,19 @@
+/* MAIN
+ * 
+ */
+
+// Fields pointers
 const
     inputName = document.getElementById("in_name"),
     inputLast = document.getElementById("in_last"),
-    inputColor = document.getElementById("in_color");
+    inputColor = document.getElementById("in_color"),
+    spanPwd = document.getElementById("out_pwd");
 
+
+// Autofocusing function
 document.addEventListener("keypress", function (event) {
 
-    if(event.code != "Enter"){
+    if (event.code != "Enter") {
         return;
     }
 
@@ -22,9 +30,18 @@ document.addEventListener("keypress", function (event) {
     }
 })
 
+// Generate button listener
 document.getElementById("in_submit").addEventListener("click", function () {
     processData();
 });
+
+// Clear button listener
+document.getElementById("in_clear").addEventListener("click", function(){
+    spanPwd.innerHTML = "";
+    inputName.value = "";
+    inputLast.value = "";
+    inputColor.value = "";
+})
 
 // Data processing function (fetch -> generate pass -> print)
 function processData() {
@@ -34,11 +51,18 @@ function processData() {
     let last = inputLast.value;
     let color = inputColor.value;
 
+    // Data validation
+    if(
+        name.trim().length == 0
+        || last.trim().length == 0
+        || color.trim().length == 0
+    ) {return;}
+
     // Generate Password
     let password = PwdGen.generate(name, last, color);
 
     // Print password
-    document.getElementById("out_pwd").innerHTML = password;
+    spanPwd.innerHTML = password;
 
 }
 

@@ -53,13 +53,14 @@
     <main>
         
         <span id="out_pwd"></span>
-        
-        <div>
-            <input type="text" name="" id="in_name" placeholder="Name" autofocus>
-            <input type="text" name="" id="in_last" placeholder="Lastname">
-            <input type="text" name="" id="in_color" placeholder="Favourite Color">
+
+        <form onsubmit="return false">
+            <input type="text" name="" id="in_name" placeholder="Name" required autofocus>
+            <input type="text" name="" id="in_last" placeholder="Lastname" required>
+            <input type="text" name="" id="in_color" placeholder="Favourite Color" required>
+            <input type="button" id="in_clear" value="Clear">
             <input type="submit" id="in_submit" value="Generate!">
-        </div>
+        </form>
 
     </main>
 
