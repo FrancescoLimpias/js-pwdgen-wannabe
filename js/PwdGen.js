@@ -1,9 +1,9 @@
-console.log("Password Generator 0.0.1");
-
 let PwdGen = {
 
+    version: "0.0.1",
+
     // PUBLIC method for password generation
-    generate(name, last, favColor){
+    generate(name, last, favColor) {
 
         // library signature key
         const SIGNATURE_KEY = '21';
@@ -12,3 +12,6 @@ let PwdGen = {
     }
 
 }
+
+console.log(`Password Generator v${PwdGen.version}`);
+console.log(PwdGen);

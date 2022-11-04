@@ -34,12 +34,35 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- JS -->
-    <script src="main.js"></script>
+    <script src="js/PwdGen.js"></script>
 
 </head>
 
 <body>
     
+    <header>
+        <h1>Password Generator</h1>
+        <h4 id="version">
+            v 
+            <script>
+                document.write(PwdGen.version);
+            </script>
+        </h4>
+    </header>
 
+    <main>
+        
+        <span id="out_pwd"></span>
+        
+        <div>
+            <input type="text" name="" id="in_name" placeholder="Name" autofocus>
+            <input type="text" name="" id="in_last" placeholder="Lastname">
+            <input type="text" name="" id="in_color" placeholder="Favourite Color">
+            <input type="submit" id="in_submit" value="Generate!">
+        </div>
+
+    </main>
+
+    <script src="js/main.js"></script>
 
 </body>
